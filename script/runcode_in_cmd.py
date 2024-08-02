@@ -4,16 +4,16 @@ import time
 
 # 定义所有需要执行的命令
 commands = [
-    "activate env2 && python D:\project\July2024_textOpenAI\script\\a1.py",
-    "activate env2 && python D:\project\July2024_textOpenAI\script\\a2.py",
-    "activate env2 && python D:\project\July2024_textOpenAI\script\\a3.py",
-    "activate env2 && python D:\project\July2024_textOpenAI\script\\a4.py",
-    "activate env2 && python D:\project\July2024_textOpenAI\script\\a5.py",
-    "activate env2 && python D:\project\July2024_textOpenAI\script\\a6.py",
-    "activate env2 && python D:\project\July2024_textOpenAI\script\\a7.py",
-    "activate env2 && python D:\project\July2024_textOpenAI\script\\a8.py",
-    "activate env2 && python D:\project\July2024_textOpenAI\script\\a9.py",
-    "activate env2 && python D:\project\July2024_textOpenAI\script\\a10.py"
+    "activate base && python D:\project\July2024_textOpenAI\script\\a1.py",
+    "activate base && python D:\project\July2024_textOpenAI\script\\a2.py",
+    "activate base && python D:\project\July2024_textOpenAI\script\\a3.py",
+    "activate base && python D:\project\July2024_textOpenAI\script\\a4.py",
+    "activate base && python D:\project\July2024_textOpenAI\script\\a5.py",
+    "activate base && python D:\project\July2024_textOpenAI\script\\a6.py",
+    "activate base && python D:\project\July2024_textOpenAI\script\\a7.py",
+    "activate base && python D:\project\July2024_textOpenAI\script\\a8.py",
+    "activate base && python D:\project\July2024_textOpenAI\script\\a9.py",
+    "activate base && python D:\project\July2024_textOpenAI\script\\a10.py"
 ]
 
 
