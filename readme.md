@@ -2,8 +2,7 @@
 
 author:  mengke25 <br />
 个人主页：[personal website](https://mengke25.github.io); <br />
-GitHub主页：[github](https://github.com/mengke25); <br />
-CSDN主页：[CSDN](https://blog.csdn.net/weixin_43168119?spm=1000.2115.3001.5343); <br />
+打赏渠道：[image](https://github.com/mengke25/mengke25.github.io/blob/main/images/dashang.png)
 
 
 ## 1. project简介
