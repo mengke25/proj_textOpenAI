@@ -9,11 +9,12 @@ with open('config/config.json', 'r', encoding='utf-8') as config_file:
 # 获取全局配置
 global_config = config["global"]
 root_path = global_config["root_path"]
+script_parallelism = global_config["script_parallelism"]
 output_dir = os.path.join(root_path, 'output')
 output_file_path = os.path.join(output_dir, 'a.xlsx')
 
 # 定义合并文件的数量
-Num_file = 10  # 你可以根据需要更改这个值
+Num_file = script_parallelism  
 
 # 读取第一个文件以获取标题行
 df = pd.read_excel(os.path.join(output_dir, 'a1.xlsx'))
@@ -37,4 +38,11 @@ final_df = pd.concat([header, merged_data])
 # 保存合并后的数据到新的Excel文件
 final_df.to_excel(output_file_path, index=False)
 
-print("文件合并完成！")
+# 删除单个文件
+for i in range(1, Num_file + 1):
+    file_path = os.path.join(output_dir, f'a{i}.xlsx')
+    if os.path.exists(file_path):
+        os.remove(file_path)
+        print(f"Deleted: {file_path}")
+
+print("文件合并并删除完成！")
