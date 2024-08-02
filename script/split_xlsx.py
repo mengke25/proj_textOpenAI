@@ -1,10 +1,18 @@
 import pandas as pd
 import numpy as np
 import os
+import json
 
-# 定义文件路径
-input_file_path = r'D:\project\July2024_textOpenAI\file\a.xlsx'
-output_dir = r'D:\project\July2024_textOpenAI\file'
+#-----------------------------------------------------------------------------------------------#
+# 读取配置文件
+with open('config\config.json', 'r', encoding='utf-8') as config_file:
+    config = json.load(config_file)
+
+# 获取全局配置
+global_config = config["global"]
+root_path = global_config["root_path"]
+input_dir = os.path.join(root_path, 'file')
+input_file_path = os.path.join(input_dir, 'a.xlsx')
 
 # 定义拆分文件的数量
 Num_file = 10  # 你可以根据需要更改这个值
@@ -31,7 +39,7 @@ for i in range(Num_file):
     split_data = data[start_row - 1:end_row - 1]
     split_df = pd.concat([header.to_frame().T, split_data])
     
-    output_file_path = os.path.join(output_dir, f'a{i+1}.xlsx')
+    output_file_path = os.path.join(input_dir, f'a{i+1}.xlsx')
     split_df.to_excel(output_file_path, index=False)
 
 print("文件拆分完成！")
