@@ -6,9 +6,6 @@ GitHub主页：[github](https://github.com/mengke25); <br />
 CSDN主页：[CSDN](https://blog.csdn.net/weixin_43168119?spm=1000.2115.3001.5343); <br />
 
 
-## 0. 项目
-
-
 ## 1. project简介
 
 ### （1）概况
@@ -49,7 +46,8 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 
 
 * 第一步，修改`config`路径下的`json`配置文件，prompt改成自己的需求，其中：   
-  * `root_path`： 项目路径，用于定位文件
+  * `root_path`： 项目路径，即本地路径，例如打包下载到D盘，那项目路径就应该是`D:\\proj_textOpenAI-main`
+  * `chatfile`：待处理文件
   * `apikey`：是openai的api key，需要自己申请
   * `apiurl`：是openai的api url，需要自己申请
   * `input_col`：是输入文本所在的列，也即想输入给AI的列
@@ -64,6 +62,7 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 {
     "global": {
         "root_path": "D:\\project\\July2024_textOpenAI",
+        "chatfile": "C:\\Users\\Allen\\Desktop\\副本孟克目标文件.xlsx", 
         "apikey": "sk-gG0j***************f9e75",
         "apiurl": "https://api.gptsapi.net",
         "python_env": "base",
@@ -79,15 +78,7 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 <br /> <br />
 
 
-* 第二步，修改`main.py`中的参数，主要是修改想要输入的xlsx文件
-```python
-# 定义输入文件
-chat_file = r'D:\project\July2024_textOpenAI\orig_file\targetfile.xlsx'
-```
-
-<br /> <br />
-
-* 第三步，运行`main.py`，等运行完，去`output`文件夹将`'****_AI.xlsx'`保存到本地
+* 第二步，运行`main.py`，等运行完，去`output`文件夹将`'****_AIextract.xlsx'`找出来，即可。
 
 
 
