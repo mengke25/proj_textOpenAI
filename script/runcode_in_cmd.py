@@ -2,7 +2,7 @@ import subprocess
 import psutil
 import time
 import json
-
+import os
 
 # 读取配置文件
 with open('config/config.json', 'r', encoding='utf-8') as config_file:
@@ -12,20 +12,12 @@ with open('config/config.json', 'r', encoding='utf-8') as config_file:
 global_config = config["global"]
 root_path = global_config["root_path"]
 python_env = global_config["python_env"]
-
+script_parallelism = global_config["script_parallelism"]
 
 # 定义所有需要执行的命令
 commands = [
-    f"activate {python_env} && python {root_path}\\script\\a1.py",
-    f"activate {python_env} && python {root_path}\\script\\a2.py",
-    f"activate {python_env} && python {root_path}\\script\\a3.py",
-    f"activate {python_env} && python {root_path}\\script\\a4.py",
-    f"activate {python_env} && python {root_path}\\script\\a5.py",
-    f"activate {python_env} && python {root_path}\\script\\a6.py",
-    f"activate {python_env} && python {root_path}\\script\\a7.py",
-    f"activate {python_env} && python {root_path}\\script\\a8.py",
-    f"activate {python_env} && python {root_path}\\script\\a9.py",
-    f"activate {python_env} && python {root_path}\\script\\a10.py"
+    f"activate {python_env} && python {os.path.join(root_path, 'script', 'uu', f'a{i}.py')}"
+    for i in range(1, script_parallelism + 1)
 ]
 
 processes = []
