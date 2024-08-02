@@ -54,6 +54,7 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
   * `apiurl`：是openai的api url，需要自己申请
   * `input_col`：是输入文本所在的列，也即想输入给AI的列
   * `output_col`：是输出结果所在的列，也即想让AI输出在excel的哪一列
+  * `python_env`：所使用的python环境，一般情况下应该是"base"
   * `prompt_template`：是AI的提示模板，可以自己修改
   * `system_message`：是系统提示语，可以自己修改
 
