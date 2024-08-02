@@ -66,6 +66,7 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
         "root_path": "D:\\project\\July2024_textOpenAI",
         "apikey": "sk-gG0j***************f9e75",
         "apiurl": "https://api.gptsapi.net",
+        "python_env": "base",
         "input_col": 5,
         "output_col": 7,
         "prompt_template": "请根据我凝练的1、2、3等小点，提炼其中最有代表性的关键词2至3个即可（每个关键词不超过8个中文字），不要提及地方名称或“自贸试验区”这种通用的词，每个关键词用分号“；”相连",
