@@ -3,8 +3,6 @@ import shutil
 import subprocess
 import json
 
-
-
 #-----------------------------------------------------------------------------------------------#
 # 读取配置文件
 with open('config\config.json', 'r', encoding='utf-8') as config_file:
@@ -14,6 +12,7 @@ with open('config\config.json', 'r', encoding='utf-8') as config_file:
 global_config = config["global"]
 root_path = global_config["root_path"]
 chat_file = global_config["chatfile"]
+script_parallelism = global_config["script_parallelism"]
 
 #-----------------------------------------------------------------------------------------------#
 def copy_and_rename(source_file, target_folder):
@@ -51,6 +50,10 @@ script_to_run = os.path.join(root_path, 'script', 'split_xlsx.py')
 subprocess.run(['python', script_to_run], check=True)
 
 #-----------------------------------------------------------------------------------------------#
+script_to_run = os.path.join(root_path, 'script', 'parallelism_pyscript.py')
+subprocess.run(['python', script_to_run], check=True)
+
+#-----------------------------------------------------------------------------------------------#
 script_to_run = os.path.join(root_path, 'script', 'runcode_in_cmd.py')
 subprocess.run(['python', script_to_run], check=True)
 
@@ -71,3 +74,36 @@ target_file = os.path.join(orig_folder, target_filename)
 
 shutil.copy2(processed_file, target_file)
 print(f"处理后的文件 {processed_file} 已经被复制到 {target_file}")
+
+#-----------------------------------------------------------------------------------------------#
+# 删除临时脚本文件
+deletescript_directory = os.path.join(root_path, 'script', 'uu')
+files_in_directory = os.listdir(deletescript_directory)
+file_directory = os.path.join(root_path, 'file')
+output_directory = os.path.join(root_path, 'output')
+
+for file in files_in_directory:
+    file_path = os.path.join(deletescript_directory, file)
+    # 检查文件是否是.py文件且不是template.py
+    if file.endswith(".py") and file != "template.py":
+        try:
+            os.remove(file_path)
+            print(f"删除临时脚本: {file_path}")
+        except Exception as e:
+            print(f"删除临时脚本 {file_path} 失败: {e}")
+
+print("临时脚本删除完成")
+
+# 删除 file_directory 路径下的所有文件，除了 a.xlsx
+files_in_file_directory = os.listdir(file_directory)
+for file in files_in_file_directory:
+    file_path = os.path.join(file_directory, file)
+    if file != "a.xlsx":
+        try:
+            os.remove(file_path)
+            print(f"Deleted: {file_path}")
+        except Exception as e:
+            print(f"Failed to delete {file_path}: {e}")
+
+print("临时文件删除完成")
+
