@@ -1,6 +1,7 @@
 {
     "global": {
         "root_path": "D:\\project\\July2024_textOpenAI",
+        "chatfile": "C:\\Users\\Allen\\Desktop\\副本孟克目标文件.xlsx", 
         "apikey": "sk-aU************************eLz",
         "apiurl": "https://api.gptsapi.net/v1",
         "input_col": 5,
