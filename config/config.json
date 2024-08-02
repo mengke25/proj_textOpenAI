@@ -1,0 +1,23 @@
+{
+    "global": {
+        "root_path": "D:\\project\\July2024_textOpenAI",
+        "apikey": "sk-aU************************eLz",
+        "apiurl": "https://api.gptsapi.net/v1",
+        "input_col": 5,
+        "output_col": 7,
+        "prompt_template": "请根据我凝练的1、2、3等小点，提炼其中最有代表性的关键词2至3个即可（每个关键词不超过8个中文字），不要提及地方名称或“自贸试验区”这种通用的词，每个关键词用分号“；”相连",
+        "system_message": "你是一个帮助提取治理举措中关键词的助手"
+    },
+    "files": [
+        { "input_file": "a1.xlsx" },
+        { "input_file": "a2.xlsx" },
+        { "input_file": "a3.xlsx" },
+        { "input_file": "a4.xlsx" },
+        { "input_file": "a5.xlsx" },
+        { "input_file": "a6.xlsx" },
+        { "input_file": "a7.xlsx" },
+        { "input_file": "a8.xlsx" },
+        { "input_file": "a9.xlsx" },
+        { "input_file": "a10.xlsx" }
+    ]
+}
