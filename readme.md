@@ -2,6 +2,9 @@
 
 author:  mengke25 <br />
 个人主页：[personal website](https://mengke25.github.io); <br />
+GitHub主页：[github](https://github.com/mengke25); <br />
+CSDN主页：[CSDN](https://blog.csdn.net/weixin_43168119?spm=1000.2115.3001.5343); <br />
+
 
 ## 1. project简介
 
@@ -47,9 +50,11 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
   * `chatfile`：待处理文件
   * `apikey`：是openai的api key，需要自己申请
   * `apiurl`：是openai的api url，需要自己申请
+  * `model_name`：是AI模型的名称，支持 "gpt-3.5-turbo"等
   * `input_col`：是输入文本所在的列，也即想输入给AI的列
   * `output_col`：是输出结果所在的列，也即想让AI输出在excel的哪一列
   * `python_env`：所使用的python环境，一般情况下应该是"base"
+  * `script_parallelism`：是脚本并行度，即运行几个脚本，一般设置为10
   * `prompt_template`：是AI的提示模板，可以自己修改
   * `system_message`：是系统提示语，可以自己修改
 
@@ -59,14 +64,16 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 {
     "global": {
         "root_path": "D:\\project\\July2024_textOpenAI",
-        "chatfile": "C:\\Users\\Allen\\Desktop\\副本孟克目标文件.xlsx", 
-        "apikey": "sk-gG0j***************f9e75",
-        "apiurl": "https://api.gptsapi.net",
-        "python_env": "base",
-        "input_col": 5,
-        "output_col": 7,
-        "prompt_template": "请根据我凝练的1、2、3等小点，提炼其中最有代表性的关键词2至3个即可（每个关键词不超过8个中文字），不要提及地方名称或“自贸试验区”这种通用的词，每个关键词用分号“；”相连",
-        "system_message": "你是一个帮助提取治理举措中关键词的助手"
+        "chatfile": "C:\\Users\\Allen\\Desktop\\新建文件夹\\a.xlsx", 
+        "apikey": "sk-aUF5e2965bb11766ab3fcd5a4fadcacc2285f64b48f6SeLz",
+        "apiurl": "https://api.gptsapi.net/v1",
+        "model_name": "gpt-3.5-turbo",
+        "input_col": 4,
+        "output_col": 10,
+        "python_env": "env2", 
+        "script_parallelism": 20, 
+        "prompt_template": "请根据我输入给你的文本，帮我判断一下这段文本是否属于abc。",
+        "system_message": "你是一个帮助判断是否未规制的助手"
     }
 }
 ```
@@ -74,21 +81,13 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 
 <br /> <br />
 
-* 第二步，运行`main.py`，等运行完，去`output`文件夹将`'****_AIextract.xlsx'`找出来，即可。
 
+* 第二步，运行`main.py`，等运行完，去`output`文件夹将`'****_AIextract.xlsx'`找出来，即可。
 
 
 
 
 欢迎star
 打赏渠道：
+
 ![image](https://github.com/mengke25/mengke25.github.io/blob/main/images/dashang.png)
-
-
-
-
-
-
-
-
-
