@@ -1,15 +1,15 @@
 {
     "global": {
         "root_path": "D:\\project\\July2024_textOpenAI",
-        "chatfile": "C:\\Users\\Allen\\Desktop\\副本孟克目标文件.xlsx", 
-        "apikey": "sk-aU************************eLz",
+        "chatfile": "C:\\Users\\Allen\\Desktop\\新建文件夹\\a.xlsx", 
+        "apikey": "sk-aUF**********************************************6SeLz",
         "apiurl": "https://api.gptsapi.net/v1",
         "model_name": "gpt-3.5-turbo",
-        "input_col": 5,
-        "output_col": 7,
+        "input_col": 4,
+        "output_col": 10,
         "python_env": "env2", 
-        "prompt_template": "请根据我凝练的1、2、3等小点，提炼其中最有代表性的关键词2至3个即可（每个关键词不超过8个中文字），不要提及地方名称或“自贸试验区”这种通用的词，每个关键词用分号“；”相连",
-        "system_message": "你是一个帮助提取治理举措中关键词的助手"
+        "prompt_template": "请根据我输入给你的文本，帮我判断一下这段文本是否属于“举措”。如果属于举措，就输出“J”， 如果不是举措，就输出“R”，其他什么都不用输出。我解释一下“举措”就是行政主体（如政府自贸区等）对当地某地区某行业的促进或管制，是有管理和促进的含义的。但我输入的文字也可能是政策文件的摘要，如“为了促进……因此印发制定出台了本政策措施举措” 或者是陈述句如“关于……的若干措施” 没有具体的规制内涵，此时你应该输出“R”。",
+        "system_message": "你是一个帮助判断是否未规制的助手"
     },
     "files": [
         { "input_file": "a1.xlsx" },
