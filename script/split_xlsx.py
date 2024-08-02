@@ -11,11 +11,12 @@ with open('config\config.json', 'r', encoding='utf-8') as config_file:
 # 获取全局配置
 global_config = config["global"]
 root_path = global_config["root_path"]
+script_parallelism = global_config["script_parallelism"]
 input_dir = os.path.join(root_path, 'file')
 input_file_path = os.path.join(input_dir, 'a.xlsx')
 
 # 定义拆分文件的数量
-Num_file = 10  # 你可以根据需要更改这个值
+Num_file = script_parallelism
 
 # 读取Excel文件
 df = pd.read_excel(input_file_path)
