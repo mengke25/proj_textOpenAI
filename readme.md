@@ -74,11 +74,21 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 
 <br /> <br />
 
+* 第二步，运行`main.py`，等运行完，去`output`文件夹将`'****_AIextract.xlsx'`找出来，即可。
+
+
+
+
+
 欢迎star
 打赏渠道：
 ![image](https://github.com/mengke25/mengke25.github.io/blob/main/images/dashang.png)
 
-* 第二步，运行`main.py`，等运行完，去`output`文件夹将`'****_AIextract.xlsx'`找出来，即可。
+
+
+
+
+
 
 
 
