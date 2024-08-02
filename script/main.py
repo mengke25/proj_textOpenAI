@@ -9,7 +9,7 @@ import json
 #-----------------------------------------------------------------------------------------------#
 
 # 定义输入文件
-chat_file = r'orig_file\targetfile.xlsx'
+chat_file = r'C:\Users\Allen\Desktop\\副本part10802.xlsx'
 
 #-----------------------------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------------------------#
@@ -69,7 +69,7 @@ script_to_run = os.path.join(root_path, 'script', 'runcode_in_cmd.py')
 subprocess.run(['python', script_to_run], check=True)
 
 #-----------------------------------------------------------------------------------------------#
-script_to_run = os.path.join(root_path, 'script', 'split_xlsx.py')
+script_to_run = os.path.join(root_path, 'script', 'append_xlsx.py')
 subprocess.run(['python', script_to_run], check=True)
 
 #-----------------------------------------------------------------------------------------------#
