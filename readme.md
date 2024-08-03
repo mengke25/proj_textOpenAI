@@ -1,5 +1,7 @@
 # 调用大模型接口批量处理文本
 
+# readme.md
+
 author:  mengke25 <br />
 个人主页：[personal website](https://mengke25.github.io); <br />
 教程：[视频](https://b23.tv/QQ54Vux)
@@ -43,7 +45,7 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 
 或者在cmd中可直接clone
 
-```cmd
+```python
 d:
 git clone https://github.com/mengke25/proj_textOpenAI.git
 ```
@@ -51,6 +53,32 @@ git clone https://github.com/mengke25/proj_textOpenAI.git
 比如在这里，我直接将项目整体放在了D盘中
 
 ![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s2.png)
+
+
+
+第二步，安装依赖
+
+在cmd中安装需用到的packages
+
+```python
+# 首先，将路径切换到根目录下
+d: 
+cd d:\proj_textOpenAI-main
+
+
+# 选择1：使用python安装，requirements.txt中的包
+python -m pip install -r requirements.txt
+
+
+# 选择2：如果是conda用户，安装requirements.txt中的包方式如下（附虚拟环境）
+conda create -n env2 python=3.11    # 创建anaconda环境
+conda activate env2                 # 激活anaconda环境
+python -m pip install -r requirements.txt
+```
+
+
+
+
 
 用编译器打开该项目的文件夹，此处我用vscode来演示
 
@@ -122,14 +150,26 @@ git clone https://github.com/mengke25/proj_textOpenAI.git
 
 ![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s6.png)
 
+### （3）补充
 
+对于pycharm用户，可能会遇到找不到相对路径的问题，
+
+此时需要您去配置run config
+
+具体步骤如下
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s7.png)
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s8.png)
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s9.png)
 
 至此，整个项目就已经部署好且已经完成运行。
 
 
 
+--------------------------
 
-欢迎star，打赏渠道：
+
+
+欢迎star，打赏渠道
 
 ![image](https://github.com/mengke25/mengke25.github.io/blob/main/images/dashang.png)
 
