@@ -52,7 +52,7 @@ git clone https://github.com/mengke25/proj_textOpenAI.git
 
 ![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s2.png)
 
-
+<br /> <br />
 
 ### （2）安装依赖
 
@@ -92,7 +92,7 @@ python -m pip install -r requirements.txt
 
 至此，本地部署已完成。下面我来介绍该如何使用。
 
-
+<br /> <br />
 
 ## 3. 使用方法
 
@@ -136,7 +136,7 @@ python -m pip install -r requirements.txt
 
 <br /> <br />
 
-
+<br /> <br />
 
 ### （2）step2：运行
 
@@ -147,6 +147,8 @@ python -m pip install -r requirements.txt
 等运行完，去`output`文件夹将`'****_AIextract.xlsx'`找出来，即可。再生成最终文件的同时，还会生成若干个子文件，用于备份。如果不需要的话，可以直接删掉。
 
 ![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s6.png)
+
+<br /> <br />
 
 ### （3）补充
 
@@ -162,6 +164,7 @@ python -m pip install -r requirements.txt
 至此，整个项目就已经部署好且已经完成运行。
 
 
+<br /> <br />
 
 --------------------------
 
