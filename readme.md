@@ -3,7 +3,6 @@
 author:  mengke25 <br />
 个人主页：[personal website](https://mengke25.github.io); <br />
 GitHub主页：[github](https://github.com/mengke25); <br />
-CSDN主页：[CSDN](https://blog.csdn.net/weixin_43168119?spm=1000.2115.3001.5343); <br />
 教程：[视频](https://b23.tv/QQ54Vux)
 
 
@@ -55,7 +54,7 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
   * `input_col`：是输入文本所在的列，也即想输入给AI的列
   * `output_col`：是输出结果所在的列，也即想让AI输出在excel的哪一列
   * `python_env`：所使用的python环境，一般情况下应该是"base"
-  * `script_parallelism`：是脚本并行度，即运行几个脚本，一般设置为10
+  * `script_parallelism`：是脚本并行度，即运行几个脚本，一般设置为10（最好别超过30）
   * `prompt_template`：是AI的提示模板，可以自己修改
   * `system_message`：是系统提示语，可以自己修改
 
