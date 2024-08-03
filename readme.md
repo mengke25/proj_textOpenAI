@@ -37,7 +37,7 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 
 ## 2.本地部署教程
 
-第一步，将项目下载到本地
+### （1）将项目下载到本地
 
 ![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s1.png)
 
@@ -54,7 +54,7 @@ git clone https://github.com/mengke25/proj_textOpenAI.git
 
 
 
-第二步，安装依赖
+### （2）安装依赖
 
 在cmd中安装需用到的packages
 
@@ -74,9 +74,9 @@ conda activate env2                 # 激活anaconda环境
 python -m pip install -r requirements.txt
 ```
 
+**下面我们就要进入正题了！**
 
-
-
+但在运行之前，还需要找到两个核心文件：
 
 用编译器打开该项目的文件夹，此处我用vscode来演示
 
