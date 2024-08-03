@@ -1,7 +1,5 @@
 # 调用大模型接口批量处理文本
 
-# readme.md
-
 author:  mengke25 <br />
 个人主页：[personal website](https://mengke25.github.io); <br />
 教程：[视频](https://b23.tv/QQ54Vux)
