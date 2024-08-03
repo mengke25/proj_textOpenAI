@@ -66,7 +66,7 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
     "global": {
         "root_path": "D:\\project\\July2024_textOpenAI",
         "chatfile": "C:\\Users\\Allen\\Desktop\\新建文件夹\\a.xlsx", 
-        "apikey": "sk-aUF5e2965bb11766ab3fcd5a4fadcacc2285f64b48f6SeLz",
+        "apikey": "sk-aUF5e29****48f6SeLz",
         "apiurl": "https://api.gptsapi.net/v1",
         "model_name": "gpt-3.5-turbo",
         "input_col": 4,
