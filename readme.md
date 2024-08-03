@@ -126,6 +126,18 @@ git clone https://github.com/mengke25/proj_textOpenAI.git
 
 
 
+### （3）补充
+如果您使用pycharm，可能会遇到找不到相对路径的问题，
+
+对此，请您在运行`main.py`之前，对run config进行配置。
+
+具体步骤如下:
+
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s7.png)
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s8.png)
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s9.png)
+
+
 至此，整个项目就已经部署好且已经完成运行。
 
 
