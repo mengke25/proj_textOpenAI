@@ -1,3 +1,5 @@
+# 调用大模型接口批量处理文本
+
 # readme.md
 
 author:  mengke25 <br />
@@ -8,9 +10,11 @@ author:  mengke25 <br />
 ## 1. project简介
 
 ### （1）概况
+
 用于在excel中调用chatGPT、Claude等AI，帮忙进行自然语言处理，并输出相应的内容。它是一个专门做dirty work的RA
 
 ### （2）主要功能
+
 我们把自然语言放到excel的某一列，比如是一段文本
 我们可以在promot中说‘请帮我提炼关键词’，‘请帮我总结’，‘请帮我翻译’，‘请判断是积极还是消极’，‘请帮我做相应的处理’
 AI会根据我们输入的文本，给出相应的处理结果，并输出到excel的某一列
@@ -18,6 +22,7 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 （为了提高运行速度，我将每个`xlsx`拆成了10个，同时运行。）
 
 ### （3）应用场景
+
 1. 文本分析：对文本进行分析，提取关键词，判断情感倾向等
 2. 文本处理：对文本进行清洗，去除无用信息，提取关键信息等
 3. 文本翻译：将文本翻译成另一种语言
@@ -30,41 +35,69 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 
 <br /> <br />
 
-## 2. project路径解释
-
-* `config`文件夹下的`config.json`为配置文件，用于输入prompt等
-* `file`文件夹下待读取`.xlsx`是原始文件
-* `orig_file`是我用于储存待读文本的文件夹，不用管
-* `output`文件夹即最终输出结果所在的文件夹
-* `script`是用于储存python脚本的文件夹
-
-<br /> <br />
-
-## 3. 使用方法（程序运行方法）
 
 
+## 2.本地部署教程
 
-* 第一步，修改`config`路径下的`json`配置文件，prompt改成自己的需求，其中：   
-  * `root_path`： 项目路径，即本地路径，例如打包下载到D盘，那项目路径就应该是`D:\\proj_textOpenAI-main`
-  * `chatfile`：待处理文件
-  * `apikey`：是openai的api key，需要自己申请
-  * `apiurl`：是openai的api url，需要自己申请
-  * `model_name`：是AI模型的名称，支持 "gpt-3.5-turbo"等
-  * `input_col`：是输入文本所在的列，也即想输入给AI的列
-  * `output_col`：是输出结果所在的列，也即想让AI输出在excel的哪一列
-  * `python_env`：所使用的python环境，一般情况下应该是"base"
-  * `script_parallelism`：是脚本并行度，即运行几个脚本，一般设置为10（最好别超过30）
-  * `prompt_template`：是AI的提示模板，可以自己修改
-  * `system_message`：是系统提示语，可以自己修改
+第一步，将项目下载到本地
+
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s1.png)
+
+或者在cmd中可直接clone
+
+```cmd
+d:
+git clone https://github.com/mengke25/proj_textOpenAI.git
+```
+
+比如在这里，我直接将项目整体放在了D盘中
+
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s2.png)
+
+用编译器打开该项目的文件夹，此处我用vscode来演示
+
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s3.png)
+
+打开文件夹后，请找到`config`路径下的`json`文件，以及`script`路径下的`main.py`
+
+这两个文件是本项目的核心文件
+
+其中`config.json`中定义了宏变量，`main.py`则是主脚本
+
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s4.png)
+
+至此，本地部署已完成。下面我来介绍该如何使用。
+
+
+
+## 3. 使用方法
+
+使用方法非常简单，分两步——修改宏变量+运行主脚本
+
+### （1）step1：改宏变量
+
+第一步，修改`config`路径下的`json`配置文件，prompt改成自己的需求，其中：   
+
+* `root_path`： 项目路径，即本地路径，例如打包下载到D盘，那项目路径就应该是`D:\\proj_textOpenAI-main`，注意这里是双斜杠
+* `chatfile`：待处理文件，也即要读取的文件
+* `apikey`：是openai的api key，需要自己申请
+* `apiurl`：是openai的api url，需要自己申请
+* `model_name`：是AI模型的名称，支持 "gpt-3.5-turbo"等
+* `input_col`：是输入文本所在的列，也即想输入给AI的列
+* `output_col`：是输出结果所在的列，也即想让AI输出在excel的哪一列
+* `python_env`：所使用的python环境，一般情况下应该是"base"
+* `script_parallelism`：是脚本并行度，即运行几个脚本，一般设置为10，最多不超过30
+* `prompt_template`：是AI的提示模板，可以自己修改
+* `system_message`：是系统提示语，可以自己修改
 
 ***一个示例：***
 
 ```json
 {
     "global": {
-        "root_path": "D:\\project\\July2024_textOpenAI",
-        "chatfile": "C:\\Users\\Allen\\Desktop\\新建文件夹\\a.xlsx", 
-        "apikey": "sk-aUF5e29****48f6SeLz",
+        "root_path": "D:\\proj_textOpenAI-main",
+        "chatfile": "D:\\proj_textOpenAI-main\\orig_file\\targetfile.xlsx", 
+        "apikey": "sk-aUF5e29*****************8f6SeLz",
         "apiurl": "https://api.gptsapi.net/v1",
         "model_name": "gpt-3.5-turbo",
         "input_col": 4,
@@ -77,11 +110,32 @@ AI会根据我们输入的文本，给出相应的处理结果，并输出到exc
 }
 ```
 
-
 <br /> <br />
 
 
-* 第二步，运行`main.py`，等运行完，去`output`文件夹将`'****_AIextract.xlsx'`找出来，即可。
+
+### （2）step2：运行
+
+第二步，修改好配置文件后，运行`main.py`。
+
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s5.png)
+
+等运行完，去`output`文件夹将`'****_AIextract.xlsx'`找出来，即可。再生成最终文件的同时，还会生成若干个子文件，用于备份。如果不需要的话，可以直接删掉。
+
+![image](https://github.com/mengke25/proj_textOpenAI/blob/main/orig_file/s6.png)
+
+
+
+至此，整个项目就已经部署好且已经完成运行。
+
+
+
+
+欢迎star，打赏渠道：
+
+![image](https://github.com/mengke25/mengke25.github.io/blob/main/images/dashang.png)
+
+
 
 
 
