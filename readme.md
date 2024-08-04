@@ -1,7 +1,7 @@
 <br>
 <div align=center>
 <h1 aligh="center">
-调用大模型接口批量处理文本
+调用openAI api接口批量处理文本
 </h1>
 </div>
 <br>
@@ -19,7 +19,7 @@ author:  mengke25 <br />
 
 ### （1）概况
 
-用于在excel中调用chatGPT、Claude等AI，帮忙进行自然语言处理，并输出相应的内容。它是一个专门做dirty work的RA
+用于在python中调用open AI的API，处理xlsx表格中的自然语言文本。一个专门做dirty work的好帮手
 
 ### （2）主要功能
 
