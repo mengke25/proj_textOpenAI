@@ -39,7 +39,6 @@ model_name = global_config["model_name"]
 input_col = global_config["input_col"]
 output_col = global_config["output_col"]
 
-
 #-----------------------------------------------------------------------------------------------#
 # 定义路径
 config_path = os.path.join(root_path, 'config', 'config.json')
@@ -49,7 +48,8 @@ output_dir = os.path.join(root_path, 'output')
 #-----------------------------------------------------------------------------------------------#
 # 设置OpenAI API密钥和URL
 os.environ["OPENAI_API_KEY"] = apikey
-os.environ["OPENAI_BASE_URL"] = apiurl
+if apiurl:
+    os.environ["OPENAI_BASE_URL"] = apiurl
 
 # 设置OpenAI API密钥
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -97,15 +97,12 @@ def get_response(prompt_template, system_message, text):
                 print(f"Failed after {max_retries} attempts: {e}")
                 return "处理失败"
 
-
 # 添加计数和进度显示
 total_rows = ws.max_row - 1  # 除去标题行
 processed_rows = 0
 total_tokens = 0
 
-
 #-----------------------------------------------------------------------------------------------#
-
 
 # 从第{input_col}列读取数据并进行处理
 for row in ws.iter_rows(min_row=2, max_row=ws.max_row, min_col=input_col, max_col=input_col):
