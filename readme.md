@@ -104,8 +104,8 @@ python -m pip install -r requirements.txt
 
 * `root_path`： 项目路径，即本地路径，例如打包下载到D盘，那项目路径就应该是`D:\\proj_textOpenAI-main`，注意这里是双斜杠
 * `chatfile`：待处理文件，也即要读取的文件
-* `apikey`：是openai的api key，需要自己申请
-* `apiurl`：是openai的api url，需要自己申请
+* `apikey`：是openai的api key，需要自己[申请](https://platform.openai.com/api-keys)
+* `apiurl`：是openai的api url，若使用openai个人申请的API，空着即可
 * `model_name`：是AI模型的名称，支持 "gpt-3.5-turbo"等
 * `input_col`：是输入文本所在的列，也即想输入给AI的列
 * `output_col`：是输出结果所在的列，也即想让AI输出在excel的哪一列
