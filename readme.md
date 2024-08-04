@@ -1,7 +1,7 @@
 <br>
 <div align=center>
 <h1 aligh="center">
-<img src="docs/logo.png" width="40"> 调用大模型接口批量处理文本
+<img src="" width="40"> 调用大模型接口批量处理文本
 </h1>
 </div>
 <br>
