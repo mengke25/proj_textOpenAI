@@ -117,6 +117,16 @@ python -m pip install -r requirements.txt
 * `apikey`：是openai的api key，需要自己[申请](https://platform.openai.com/api-keys)，也可以第三方（如[柏拉图](https://api.bltcy.ai/token)），或者直接某宝去购买
 * `apiurl`：是openai的api url，若使用openai个人申请的API，空着即可
 * `model_name`：是AI模型的名称，支持 "gpt-3.5-turbo"等
+  * **GPT-4**, **GPT-4-32k**: 通用性很强，适用于各种复杂的自然语言处理任务。
+  * **GPT-4-Turbo**, **GPT-4-Turbo-2024-04-09**: 优化的版本，速度更快，费用可能更低。
+  * **GPT-4-1106-preview**, **GPT-4-Turbo-preview**, **GPT-4-Vision-preview**: 这些是预览版本，可能包含一些最新功能和改进。
+  * **GPT-4o**, **GPT-4o-mini**: 优化版本，关注特定性能提升，具体细节需要查看官方文档。
+  * **Azure-GPT-4**: Azure平台上的GPT-4，集成在Azure生态系统中，便于使用Azure的其他服务。
+  * **GPT-3.5-Turbo**, **GPT-3.5-Turbo-1106**, **GPT-3.5-Turbo-16k**: 通常比基础版GPT-3更快且更便宜，适合需要快速响应且较为复杂的任务。
+  * **Azure-GPT-3.5**: 相对于标准GPT-3.5，集成在Azure平台上，更方便使用Azure的服务。
+  * **GLM-4**, **GLM-4v**, **GLM-3-Turbo**: 由不同组织开发的模型，如GLM4、GLMv4等，适用于特定场景和任务，详细性能需参考相应的技术文档。
+  * 具体细节需查看发布方的文档，但通常是较高性能的模型，可能在某些特性上有独特的优势。
+  * 专注于对话生成任务，适合需要高质量交互的应用。
 * `input_col`：是输入文本所在的列，也即想输入给AI的列
 * `output_col`：是输出结果所在的列，也即想让AI输出在excel的哪一列
 * `python_env`：所使用的python环境，一般情况下应该是"base"
