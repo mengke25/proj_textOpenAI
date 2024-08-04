@@ -1,25 +1,10 @@
 <br>
-
 <div align=center>
 <h1 aligh="center">
 <img src="docs/logo.png" width="40"> 调用大模型接口批量处理文本
 </h1>
-    
-<h2 aligh="left">
-    
-个人主页[![Github][Github-image]][Github-url]
-
-[Github-image]: https://img.shields.io/badge/github-12100E.svg?style=flat-square
-
-[Github-url]: https://mengke25.github.io/xlsxAPI
-
-</h2>
-
-
 </div>
 <br>
-
-
 
 
 author:  mengke25 <br />
