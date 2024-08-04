@@ -1,4 +1,27 @@
-# 调用大模型接口批量处理文本
+<br>
+
+<div align=center>
+<h1 aligh="center">
+<img src="docs/logo.png" width="40"> 调用大模型接口批量处理文本
+</h1>
+
+[![Github][Github-image]][Github-url]
+[![Bilibili][Wiki-image]][Wiki-url]
+[![PR][PRs-image]][PRs-url]
+
+[Github-image]: https://img.shields.io/badge/github-12100E.svg?style=flat-square
+[Wiki-image]: https://img.shields.io/badge/wiki-项目文档-black?style=flat-square
+
+
+[Github-url]: https://mengke25.github.io/xlsxAPI
+[Wiki-url]: https://b23.tv/QQ54Vux
+
+
+</div>
+<br>
+
+
+
 
 author:  mengke25 <br />
 个人主页：[personal website](https://mengke25.github.io); <br />
