@@ -116,7 +116,7 @@ python -m pip install -r requirements.txt
 * `chatfile`：待处理文件，也即要读取的文件
 * `apikey`：是openai的api key，需要自己[申请](https://platform.openai.com/api-keys)，也可以第三方（如[柏拉图](https://api.bltcy.ai/token)），或者直接某宝去购买
 * `apiurl`：是openai的api url，若使用openai个人申请的API，空着即可
-* `model_name`：是AI模型的名称，支持 "gpt-3.5-turbo"等
+* `model_name`：是AI模型的名称，支持 "gpt-3.5-turbo"等，常见的模型有：
   * **GPT-4**, **GPT-4-32k**: 通用性很强，适用于各种复杂的自然语言处理任务。
   * **GPT-4-Turbo**, **GPT-4-Turbo-2024-04-09**: 优化的版本，速度更快，费用可能更低。
   * **GPT-4-1106-preview**, **GPT-4-Turbo-preview**, **GPT-4-Vision-preview**: 这些是预览版本，可能包含一些最新功能和改进。
