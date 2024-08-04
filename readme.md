@@ -6,16 +6,8 @@
 </h1>
 
 [![Github][Github-image]][Github-url]
-[![Bilibili][Wiki-image]][Wiki-url]
-[![PR][PRs-image]][PRs-url]
-
 [Github-image]: https://img.shields.io/badge/github-12100E.svg?style=flat-square
-[Wiki-image]: https://img.shields.io/badge/wiki-项目文档-black?style=flat-square
-
-
 [Github-url]: https://mengke25.github.io/xlsxAPI
-[Wiki-url]: https://b23.tv/QQ54Vux
-
 
 </div>
 <br>
