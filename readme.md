@@ -7,9 +7,9 @@
 <br>
 
 
-author:  mengke25 <br />
+主页：[github](https://github.com/mengke25); <br />
 
-主页：[personal website](https://mengke25.github.io); <br />
+BLOG：[BLOG](https://mengke25.github.io); <br />
 
 教程：[视频](https://b23.tv/QQ54Vux)
 
